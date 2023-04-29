@@ -1,7 +1,10 @@
 package com.devsuperior.dscatalog.dto;
 
+import com.devsuperior.dscatalog.services.validation.UserInsertValid;
+
 import javax.validation.constraints.Size;
 
+@UserInsertValid
 public class UserInsertDTO extends UserDTO{
   @Size(min = 1, max = 32, message = "Senha deve ter @/-[A-Z]a-z1-9")
   private String password;
